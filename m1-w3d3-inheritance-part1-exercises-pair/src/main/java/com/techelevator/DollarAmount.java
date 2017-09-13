@@ -17,12 +17,24 @@ public class DollarAmount {
     	this.dollars = dollars;
     	this.cents = cents;
     }
+<<<<<<< HEAD
+=======
+    
+    public String toString() {
+    	return "$" + dollars + "." + cents;
+    }
+    
+>>>>>>> 203fff142e4f3e5072922ff634c04e8d2a83699c
     public int getCents() {
         return (int)(totalAmountInCents % 100);
     }
     
     public int getDollars() {
         return totalAmountInCents / 100;
+    }
+    
+    public boolean getIsNegative() {
+    	return isNegative;
     }
     
     public boolean isGreaterThan(DollarAmount amountToCompare) {
