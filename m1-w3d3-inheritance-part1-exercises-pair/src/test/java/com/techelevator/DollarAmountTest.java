@@ -31,4 +31,14 @@ public class DollarAmountTest {
 		
 	}
 
+	@Test
+	public void testToStringNeg() {
+		//Act
+		String testString = sut.toString();
+		
+		//Assert
+		assertEquals("$2.35", testString);
+		
+	}
+	
 }
