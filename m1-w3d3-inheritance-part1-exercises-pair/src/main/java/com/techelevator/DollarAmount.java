@@ -5,11 +5,18 @@ public class DollarAmount {
     public static final DollarAmount ZERO_DOLLARS = new DollarAmount(0);
     
     private int totalAmountInCents;
+    private int cents;
+    private int dollars;
+    private boolean isNegative;
     
     public DollarAmount(int totalAmountInCents) {
         this.totalAmountInCents = totalAmountInCents;
     }
     
+    public DollarAmount(int dollars, int cents) {
+    	this.dollars = dollars;
+    	this.cents = cents;
+    }
     public int getCents() {
         return (int)(totalAmountInCents % 100);
     }
