@@ -88,7 +88,7 @@ public class DollarAmount {
     	if(isNegative()) {
     		result += "-";
     	}
-    		result += "$" + getDollars() + ".";
+    		result += "$" + Math.abs(getDollars()) + "."; //added Math.abs
     	if(getCents() < 10){
     		result += "0";
     	}
