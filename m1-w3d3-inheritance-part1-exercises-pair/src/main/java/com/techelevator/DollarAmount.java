@@ -18,6 +18,7 @@ public class DollarAmount {
     	this.cents = cents;
     }
     
+    @Override
     public String toString() {
     	return "$" + dollars + "." + cents;
     }
