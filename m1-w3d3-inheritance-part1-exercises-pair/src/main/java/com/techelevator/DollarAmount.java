@@ -4,7 +4,7 @@ public class DollarAmount {
 
     public static final DollarAmount ZERO_DOLLARS = new DollarAmount(0);
     
-    private int totalAmountInCents;
+    private int totalAmountInCents = 0;
     private int cents;
     private int dollars;
     private boolean isNegative;
@@ -12,15 +12,11 @@ public class DollarAmount {
     public DollarAmount(int totalAmountInCents) {
         this.totalAmountInCents = totalAmountInCents;
     }
-    
+
     public DollarAmount(int dollars, int cents) {
+
     	this.dollars = dollars;
     	this.cents = cents;
-    }
-    
-    @Override
-    public String toString() {
-    	return "$" + dollars + "." + cents;
     }
     
     public int getCents() {
@@ -73,6 +69,7 @@ public class DollarAmount {
         }
     }
     
+    
     @Override
     public boolean equals(Object obj) {
         if(obj != null && obj instanceof DollarAmount) {
@@ -85,6 +82,19 @@ public class DollarAmount {
     @Override
     public int hashCode() {
     	return totalAmountInCents;
+    }
+    
+    @Override
+    public String toString() {
+    	String result = "";
+    	if(isNegative()) {
+    		result += "-";
+    	}
+    		result += "$" + Math.abs(getDollars()) + "."; //added Math.abs
+    	if(getCents() < 10){
+    		result += "0";
+    	}
+    	return result + getCents();
     }
     
 }
