@@ -1,6 +1,6 @@
 package com.techelevator;
 
-public class BankAccount {
+public abstract class BankAccount {
 
 	private String accountNumber;
 	private DollarAmount balance = new DollarAmount(0);
@@ -18,6 +18,10 @@ public class BankAccount {
 		balance = balance.minus(amountToWithdraw);
 		}
 		return balance;
+	}
+	
+	public DollarAmount accountBalance(String accountNumber){
+		return getBalance();
 	}
 	
 	public void transfer(BankAccount destinationAccount, DollarAmount transferAmount){
