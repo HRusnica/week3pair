@@ -48,7 +48,7 @@ public class HourlyWorker implements Worker {
 			if (hoursWorked <= 40) {
 				return calculateWeeklyPay = hourlyRate * hoursWorked; 
 			} 
-			return calculateWeeklyPay = hourlyRate * 40 + overTime (hourlyRate * 1.5);
+			return calculateWeeklyPay = hourlyRate * 40 + (hoursWorked - 40) * (hourlyRate) * 1.5;
 		}
 
 		public double getHourlyRate() {

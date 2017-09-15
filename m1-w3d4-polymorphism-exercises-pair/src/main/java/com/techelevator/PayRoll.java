@@ -11,7 +11,6 @@ public class PayRoll {
 		SalaryWorker bobDob = new SalaryWorker(50000); 
 		bobDob.setFirstName("Beebob");
 		bobDob.setLastName("Dobdoo");
-		bobDob.setHoursWorked(35);
 		HourlyWorker susan = new HourlyWorker(15.95);
 		susan.setFirstName("Susan");
 		susan.setLastName("Sommers");
